@@ -1,5 +1,5 @@
 export default function updateStudentGradeByCity(students, city, newGrades) {
-const uniqstudents = students.filter((student) => student.location === city);
+  const uniqstudents = students.filter((student) => student.location === city);
   for (const student of uniqstudents) {
     student.grade = 'N/A';
   }
