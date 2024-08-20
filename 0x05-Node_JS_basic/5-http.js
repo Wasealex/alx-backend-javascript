@@ -16,7 +16,7 @@ function countStudents(fileName) {
       } else {
         let output = '';
         const lines = data.toString().split('\n');
-        for (let i = 0; i < lines.length; i += 1) {
+        for (let i = 1; i < lines.length; i += 1) {
           if (lines[i]) {
             const field = lines[i].toString().split(',');
             length += 1;
@@ -35,7 +35,7 @@ function countStudents(fileName) {
           }
         }
 
-        const count = length - 1;
+        const count = length;
         output += `Number of students: ${count}\n`;
         for (const [key, value] of Object.entries(fields)) {
           output += `Number of students in ${key}: ${value}. `;
