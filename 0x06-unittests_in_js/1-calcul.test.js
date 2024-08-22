@@ -22,5 +22,8 @@ describe('calculateNumber', () => {
     it('divide postive non zero numbers', () => {
 	    assert.strictEqual(calculateNumber('DIVIDE', 6.0, 3.0), 2);
     });
+      it('divide postive zero numbers', () => {
+	  assert.strictEqual(calculateNumber('DIVIDE', 0.0, 0.0), 'Error')
+      })
   });
 });
